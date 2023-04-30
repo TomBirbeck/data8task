@@ -19,7 +19,7 @@ const handleEmail = (e) => {
 }
 
 const isEmailValid = async (email) => {
-    const res = await fetch ('https://webservices.data-8.co.uk/EmailValidation/IsValid.json?key=',
+    const res = await fetch (`https://webservices.data-8.co.uk/EmailValidation/IsValid.json?key=NHWE-QAUR-DUI4-S3S6`,
     {method: 'POST',
     body: JSON.stringify(
         {
@@ -35,9 +35,9 @@ const isEmailValid = async (email) => {
 const checkEmail = async (e) => {
     errorMessage.textContent = '';
     e.preventDefault()
-    console.log(e.target)
     const res = await isEmailValid(userEmail)
     if (res.Result === 'Valid'){
+        // form submit here
         console.log("Valid")
        firstName.value = ''
        surName.value = ''
