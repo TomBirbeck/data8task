@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+main{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    padding: 1rem;
+}
+
+.email-error-message {
+    color: red
+}
+
+.form-button {
+    margin: 1rem 0;
+    background-color: green;
+    color: antiquewhite;
+    border-radius: 0.25rem;
+}
