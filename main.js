@@ -5,17 +5,23 @@ const email = document.querySelector('.form-email');
 const button = document.querySelector('.form-button');
 const errorMessage = document.querySelector('.email-error-message')
 
-let userEmail = '';
+let user = {
+    firstname: '',
+    surname: '',
+    email: '',
+}
 
 const handleFirstName = (e) => {
     e.preventDefault();
+    user.firstname = e.target.value
 }
 const handleSurname = (e) => {
     e.preventDefault();
+    user.surname = e.target.value
 }
 const handleEmail = (e) => {
     e.preventDefault();
-    userEmail = e.target.value;
+    user.email = e.target.value;
 }
 
 const isEmailValid = async (email) => {
@@ -35,7 +41,7 @@ const isEmailValid = async (email) => {
 const checkEmail = async (e) => {
     errorMessage.textContent = '';
     e.preventDefault()
-    const res = await isEmailValid(userEmail)
+    const res = await isEmailValid(user.email)
     if (res.Result === 'Valid'){
         // form submit here
         console.log("Valid")
