@@ -6,10 +6,6 @@
   margin: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 input, button, textarea, select {
   font: inherit;
 }
@@ -18,21 +14,21 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-html {
+.app {
   background-color: blanchedalmond;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
+.header {
     text-align: center;
     margin-top: 1rem;
 }
-
-main{
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   .email-form {
     height: fit-content;
