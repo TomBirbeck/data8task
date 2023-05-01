@@ -1,1 +1,60 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.app {
+  background-color: blanchedalmond;
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+    text-align: center;
+    margin-top: 1rem;
+}
+  
+  .email-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: solid 2px black;
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    background-color: rgb(186, 209, 202);
+}
+
+
+.email-error-message {
+    color: red
+}
+
+.form-button {
+    margin: 1rem 0;
+    background-color: green;
+    color: antiquewhite;
+    border-radius: 0.25rem;
+    padding: 0.3rem;
+    border: solid 1px black;
+}
+
+.form-button:hover {
+  scale: 1.1;
+}
