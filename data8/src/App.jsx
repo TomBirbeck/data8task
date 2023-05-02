@@ -20,17 +20,17 @@ const handleEmail = (e) => {
 }
 
 const isEmailValid = async (email) => {
-  const res = await fetch (`https://webservices.data-8.co.uk/EmailValidation/IsValid.json?key=${API}`,
-  {method: 'POST',
-  body: JSON.stringify(
-      {
-          "email": `${email}`,
-          "level": "Address",
-        }
-  )
-  });
-  const data = await res.json();
-  return data;
+  // const res = await fetch (`https://webservices.data-8.co.uk/EmailValidation/IsValid.json?key=${API}`,
+  // {method: 'POST',
+  // body: JSON.stringify(
+  //     {
+  //         "email": `${email}`,
+  //         "level": "Address",
+  //       }
+  // )
+  // });
+  // const data = await res.json();
+  // return data;
 }
 
 const checkEmail = async (e) => {
