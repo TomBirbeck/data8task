@@ -39,23 +39,23 @@ const checkEmail = async (e) => {
   if (res.Result === 'Valid'){
       // form submit here
       setError(false);
-      console.log("Valid");
+      console.log("Valid", user);
+      setUser({...user, firstname: '', surname: '', email: ''})
   } else {
       console.log("InValid");
       setError(true);
   }
 }
-
   return (
     <div className='app'>
         <h1 className='header'>Data8 Email Signup</h1>
         <form className="email-form" onSubmit={checkEmail}>
             <label htmlFor="firstname">Firstname</label>
-            <input type="text" className="form-firstname" title="firstname" placeholder="please enter your firstname" onChange={handleFirstName}/>
+            <input type="text" value={user.firstname || ''} className="form-firstname" title="firstname" placeholder="please enter your firstname" onChange={handleFirstName}/>
             <label htmlFor="surname" >Surname</label>
-            <input type="text" className="form-surname" title="surname" placeholder="please enter your surname" onChange={handleSurname}/>
+            <input type="text" value={user.surname || ''} className="form-surname" title="surname" placeholder="please enter your surname" onChange={handleSurname}/>
             <label htmlFor="email">Email</label>
-            <input type="email" className="form-email" title="email" placeholder="please enter your e-mail" onChange={handleEmail}/>
+            <input type="email" value={user.email || ''} className="form-email" title="email" placeholder="please enter your e-mail" onChange={handleEmail}/>
             {error && <p className="email-error-message">Please enter a valid email address</p>}
             <button type="submit" className="form-button">Submit</button>
         </form>
